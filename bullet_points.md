@@ -19,4 +19,5 @@ Rough guideline
 	- "$ pyenv install -- list" to show available versions and choose one
 	- Install via "$ pyenv install 3.8.6"
 	- Create venv: "$ pyenv virtualenv 3.8.6 <name>
-
+- Install VSCode
+	- Open within WSL 2 via "$ code ."
