@@ -1,6 +1,6 @@
 # How to set up a Python development environment on Windows 10
 
-In this guide we will use the Windows Subsystem for Linux (**WSL**) to set up a Python development environment.
+This guide is a quick reference on how to set up a Python development environment on Windows 10 using the Windows Subsystem for Linux (**WSL**).
 Further we will use Pyenv for managing different Python versions.
 
 ## Wait, Windows and development?
@@ -17,7 +17,8 @@ This way the WSL, being just the bash, also supports an IDE.
 
 ## Ok, got it. But what do we need Pyenv for?
 
-Pyenv is a simple tool for managing Python versions on your system, which is absolutely necessary if you are going to develop and work on several projects at the same time.
+Pyenv is a simple tool for managing Python versions on your system, which is highly recommended if you are going to develop and work on several projects at the same time that require different versions of Python.
+Check out the official [Pyenv repository](https://github.com/pyenv/pyenv) for a deeper understanding.
 
 If you want to find out more about the WSL or Pyenv check out the web.
 There is plenty of content itnroducing you to them and explaining why they are good for you.😎
@@ -30,6 +31,57 @@ If our system up-to-date we can simply follow the official [guide](https://docs.
 
 ## Step 2: Install Pyenv
 
-Opening the WSL console we run `$ curl https://pyenv.run | bash` which pulls ??? How did we get the Python verson?
+The official [Pyenv repository](https://github.com/pyenv/pyenv) has an installation guide.
+Exemplary we will go through the installation procedure for Ubuntu.
+If you are using a different Linux distribution, please make sure to check out the official guide.
 
-Next we add the following commands
+On Ubuntu we start by opening the WSL console and running
+```
+  $ curl https://pyenv.run | bash
+```
+which pulls ??? How did we get the Python version?
+
+Next we add the following commands to our `.bashrc` file, which can be found under `$ ~/home/user/`:
+```
+  export PATH="~/.pyenv/bin:$PATH"
+  eval "$(pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
+```
+Afterwards we activate the changes via the command `$ source ~/.bashrc`, which reloads the bash with our new configurations.
+
+Install Python build dependencies????
+I do believe via
+```
+  $ sudo apt-get install -y build-essential libssl-dev zlib1g-dev libbz2-dev \
+  libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
+  xz-utils tk-dev libffi-dev liblzma-dev python-openssl git
+```
+
+Having Pyenv set up, we can install a specific Python version via
+```
+  $ pyenv install 3.8.6
+```
+where we can substitute 3.8.6 for the desired version.
+A list of all available versions can be shown via
+```
+  $ pyenv install --list ?????????
+```
+
+## (Optional) Step ???: Install VS Code
+
+Download Visual Studio Code (**VS Code**) from the official website, which can be found [here](https://code.visualstudio.com/) or simply google it.
+
+Once we open VS Code for the first time it will detect that WSL installed on our system and thus, ask us we would like to install its remote extensions.
+YES!
+The remote extensions will allow us to use VS Code on Windows while actually running the code remotely on WSL - a true Linux environment.
+
+There are several ways to connect VS Code to WSL, but the one I find the easiest is to browse within the WSL to the folder of the project I want to open and typing
+```
+  $ code .
+ ```
+This will open VS Code on Windows within our WSL project folder, which means that all our files are already within the file explorer.
+
+That's it!
+Now we are set up to develop with Python on Windows.
+
+Happy coding!
