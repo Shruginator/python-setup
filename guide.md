@@ -3,6 +3,8 @@
 This guide is a quick reference on how to set up a Python development environment on Windows 10 using the Windows Subsystem for Linux (**WSL**).
 Further we will use Pyenv for managing different Python versions.
 
+In addition, we will show how to connect to GitHub in order to start our own development project and how Windows allows us to use VS Code on Windows while remotely connecting to WSL.
+
 ## Wait, Windows and development?
 
 That is correct!
@@ -70,10 +72,10 @@ A list of all available versions can be shown via
 ## (Optional) Step 3: Connect to GitHub
 
 GitHub is a version control system that not only allows you to store your project in the cloud but also makes sharing and collaborating easy.
-If you do not have an account yet feel free to head over to [GitHub](https://github.com/) and register.
+If you do not have an account yet feel free to head over to [GitHub](https://github.com/) to register.
 
-When you connect to GitHub it will ask for your login credentials.
-In order to make the authentification easier you can use Secure Shell (**SSH**).
+Whenever you connect to GitHub from your machine you will be asked for your login credentials.
+In order to automate the authentification we can use Secure Shell (**SSH**), which is a network protocol particularly for connecting and authenticating to remote servers and services.
 
 public and private key
 follow [github guide](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh)
