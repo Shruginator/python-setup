@@ -69,13 +69,17 @@ A list of all available versions can be shown via
   $ pyenv install --list ?????????
 ```
 
-## (Optional) Step 3: Connect to GitHub
+## (Optional) Step 3: Connect to GitHub and SSH
 
 GitHub is a version control system that not only allows you to store your project in the cloud but also makes sharing and collaborating easy.
 If you do not have an account yet feel free to head over to [GitHub](https://github.com/) to register.
 
 Whenever you connect to GitHub from your machine you will be asked for your login credentials.
-In order to automate the authentification we can use Secure Shell (**SSH**), which is a network protocol particularly for connecting and authenticating to remote servers and services.
+In order to skip this authentification we can use Secure Shell (**SSH**), which is a network protocol particularly for connecting and authenticating to remote servers and services.
+
+The SSH setup is rather simple and we will quickly go through it.
+Make sure to check the official [GitHub guide](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh) for additional information and troubleshooting.
+
 
 public and private key
 follow [github guide](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh)
