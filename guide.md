@@ -59,15 +59,31 @@ I do believe via
   xz-utils tk-dev libffi-dev liblzma-dev python-openssl git
 ```
 
-Having Pyenv set up, we can install a specific Python version via
+Having Pyenv set up, we can install a specific Python version with the command
 ```
-  $ pyenv install 3.8.6
+  $ pyenv install [python-version]
 ```
-where we can substitute 3.8.6 for the desired version.
+For example `$ pyenv install 3.8.6` will instapp Python 3.8.6.
 A list of all available versions can be shown via
 ```
-  $ pyenv install --list ?????????
+  $ pyenv install --list
 ```
+In order to list the Python versions already installed on our system we can type
+```
+  $ pyenv versions
+```
+Note that this will list the installed Python versions, the directories of existing virtual environments as well as their names.
+
+Once we have installed a specific Python version we can use it to create a virtual environment.
+All we need to do is to specify the Python version and a name for the env and then initialize it via
+```
+  $ pyenv virtualenv [python-version] [env-name]
+```
+For example `$ pyenv virtualenv 3.8.6 my-virtual-env`.
+
+How to use the env?
+
+For further information regarding Pyenv commands please refer to the [documentation](https://github.com/pyenv/pyenv) or type `$ pyenv help`.
 
 ## (Optional) Step 3: GitHub Setup
 
