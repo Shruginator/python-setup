@@ -69,20 +69,48 @@ A list of all available versions can be shown via
   $ pyenv install --list ?????????
 ```
 
-## (Optional) Step 3: Connect to GitHub and SSH
+## (Optional) Step 3: GitHub Setup
 
 GitHub is a version control system that not only allows you to store your project in the cloud but also makes sharing and collaborating easy.
 If you do not have an account yet feel free to head over to [GitHub](https://github.com/) to register.
 
+Once we have our account we can set up our user information used across all local repositories on our machine.
+In order to set a name associated with our contributions we can type
+```
+  $ git config --global user.name "[firstname lastname]"
+```
+Furthermore,
+```
+  $ git config --global user.email "[valid-email]"
+```
+will set an email address that will link our contributions to our account.
+
+Now we can either download an existing repository from the internet via
+```
+  $ git clone [url]
+```
+or initialize an existing local directory as a Git repository by executing the following command within the respective directory:
+```
+  $ git init
+```
+
+As a quick reference for the most common GitHub commands we recommend to check out the [Git cheat sheet](https://education.github.com/git-cheat-sheet-education.pdf).
+
+### SSH Setup
+
 Whenever you connect to GitHub from your machine you will be asked for your login credentials.
 In order to skip this authentification we can use Secure Shell (**SSH**), which is a network protocol particularly for connecting and authenticating to remote servers and services.
 
-The SSH setup is rather simple and we will quickly go through it.
-Make sure to check the official [GitHub guide](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh) for additional information and troubleshooting.
+Simply said, SSH works with key pairs, consisting of a public and a private key.
+As the names imply, the public key is intended for sharing while the private key should be only known to its owner.
+Now the idea is that with the receiver's public key any person can encrypt a message, but that encrypted message can only be decrypted with the receiver's private key.
+This concept is called public-key crypthography or asymmetric cryptography and in fact cryptographical algorithms are used to generate the key pair in the first place.
+
+The SSH setup for GitHub is simple thanks to the official [GitHub guide](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh).
+However, we will go through the most important steps for quick reference.
+For additional information or troubleshooting please refer to the GitHub guide.
 
 
-public and private key
-follow [github guide](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh)
 
 set user profile
 generate key "keygen ..."
