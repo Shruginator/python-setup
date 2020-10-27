@@ -119,26 +119,25 @@ In order to skip this authentification we can use Secure Shell (**SSH**), which 
 
 Simply said, SSH works with key pairs, consisting of a public and a private key.
 As the names imply, the public key is intended for sharing while the private key should be only known to its owner.
-Now the idea is that with the receiver's public key any person can encrypt a message, but that encrypted message can only be decrypted with the receiver's private key.
-This concept is called public-key crypthography or asymmetric cryptography and in fact cryptographical algorithms are used to generate the key pair in the first place.
+With the receiver's public key any person can encrypt a message, but that encrypted message can only be decrypted with the receiver's private key.
+This concept is called public-key cryptography or asymmetric cryptography and in fact cryptographical algorithms are used to generate the key pair in the first place.
 
-The SSH setup for GitHub is simple thanks to the official [GitHub guide](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh).
-However, we will go through the most important steps for quick reference.
-For additional information or troubleshooting please refer to the GitHub guide.
+The SSH setup consists of the following main steps:
+1. Checking for existing SSH keys
+2. Generating new keys if necessary
+3. Adding a SSH public key to your GitHub account
+4. Testing your SSH connection
 
-
-
-set user profile
-generate key "keygen ..."
-print key (below)
-add key to github profile
-clone or create project
-
-For new Linux users it can be bit tricky to extract the public key and enter it to GitHub.
-A possible way is to simply print your public key via the command
+For the details we refer to GitHub's comprehensive [guide](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/connecting-to-github-with-ssh) for setting up the SSH service.
+However, one additional tip:
+For new Linux users it can be bit tricky to extract the public key in order to add it to the GitHub account.
+A possible way is to simply print the public key via the command
 ```
   $ cat id_rsa.pub
 ```
+and then copy and paste it.
+
+Once the setup is done you are able to connect to GitHub without entering your login credentials.
 
 ## (Optional) Step ???: Install VS Code
 
