@@ -36,6 +36,14 @@ Once the download has finished we perform the update which might take a bit of t
 If our system up-to-date we can simply follow the official [guide](https://docs.microsoft.com/en-us/windows/wsl/install-win10) provided by Windows for installing WSL 2. The guide covers all necessary steps and provides a lovely troubleshoot section.
 Feel free to checkout the additional information and tutorials provided by Windows.
 
+Make sure the guide says enough.
+Create unix user account - name, password, conrfirm
+
+sudo apt update for updating packages
+sudo apt upgrade for updating system, confirm with yes
+
+sudo apt install htop - task manager for linux
+
 ## Step 2: Install Pyenv
 
 The official [Pyenv repository](https://github.com/pyenv/pyenv) has an installation guide.
