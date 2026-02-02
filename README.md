@@ -2,8 +2,9 @@
 
 Or more precisely: Windows WSL Setup for Python Development
 
-This is a quick reference to set up a Linux environment for Python development on Windows.
-Used tools are WSL, Ubuntu, Pyenv, VSCode and GitHub.
+This is a quick reference to set up a Linux environment for Python development on
+Windows.
+Used tools are WSL, Ubuntu, Pyenv, VS Code and GitHub.
 
 ### Table of Contents
 
@@ -15,7 +16,7 @@ Used tools are WSL, Ubuntu, Pyenv, VSCode and GitHub.
 5. [Install Python](#5-install-python)
 6. [Virtual Environment](#6-virtual-environment)
 7. [GitHub SSH Connection](#7-github-ssh-connection)
-8. [VSCode](#8-vscode)
+8. [VS Code](#8-vs-code)
 
 [Further Tips](#further-tips)
 
@@ -173,16 +174,16 @@ In case of issues: Official [pyenv Github repository](https://github.com/pyenv/p
 - To clone a repo copy its SSH link and use it via `$ git clone <SSH_REPO_LINK>`
 - In case of issues: Official [GitHub SSH guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh).
 
-### 8. VSCode
+### 8. VS Code
 
-- Install VSCode via Microsoft Store or the official [VSCode website](https://code.visualstudio.com/)
-- To open the current directory in VSCode use
+- Install VS Code via Microsoft Store or the official [VS Code website](https://code.visualstudio.com/)
+- To open the current directory in VS Code use
 	
 	```sh
 	$ code .
 	```
 
-- Replace the dot with a path to open the respective directory in VSCode
+- Replace the dot with a path to open the respective directory in VS Code
 
 
 ## Further Tips
@@ -193,7 +194,7 @@ In case of issues: Official [pyenv Github repository](https://github.com/pyenv/p
 
 ### Console Customization
 
-- In Windows Search search for "terminal| or "Ubuntu"
+- In Windows Search search for "terminal" or "Ubuntu"
 - Right-click the top frame of the terminal and choose **Settings**
 - Under Startup set your default profile to Ubuntu
 - Go to **Profiles → Ubuntu → Appearance** to change color scheme, font and font size, etc.
